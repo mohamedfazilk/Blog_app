@@ -22,9 +22,9 @@ class BlogUpdateView(UpdateView):
     template_name = 'blog/post_edit.html'
     fields = ['title','body']
 
-# class BlogDeleteView(DeleteView):
-#     model = Post
-#     template_name = 'blog/post_del.html'
+class BlogDeleteView(DeleteView):
+    model = Post
+    template_name = 'blog/post_del.html'
 
 
 
