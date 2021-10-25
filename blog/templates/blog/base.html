@@ -9,6 +9,13 @@ rel="stylesheet">
 <body>
 <header>
 
+    {% if user.is_authenticated %}
+      <p>HI {{ user.username}}!</p>
+    {% else %}
+    <p>You are not logged in</p>
+    <a href="{% url 'login'%}"></a>
+    {% endif %}
+
    <div class="nav-left">
        <h1><a href="{% url 'home' %}">Django blog</a></h1>
    </div>
